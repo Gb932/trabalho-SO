@@ -1,0 +1,15 @@
+import random
+
+# Função para gerar 100 números inteiros como strings e salvá-los em um arquivo .dat
+def gerar_arquivo(nome_arquivo):
+    with open(nome_arquivo, 'w') as f:
+        # Gera 100 números inteiros entre 0 e 100 e grava cada um como char (string)
+        for _ in range(100):
+            num = str(random.randint(0, 100))
+            f.write(num + '\n')
+
+# Gera os dois arquivos .dat
+gerar_arquivo('arquivo1.dat')
+gerar_arquivo('arquivo2.dat')
+
+print("Arquivos 'arquivo1.dat' e 'arquivo2.dat' foram gerados com sucesso!")
