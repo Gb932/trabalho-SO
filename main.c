@@ -201,7 +201,7 @@ int read_input_files(char **input_files, int num_files, int ***values, int *tota
         }
 
         int value, count = 0, capacity = BUFFER_SIZE;
-        (*values)[i] = malloc(capacity * sizeof(int)); // Aloca buffer inicial para os valores.
+        (*values)[i] = malloc(capacity * sizeof(int)); // Aloca buffer inicial para os valores,resultando em uma matriz alocada dinamicamente
         if ((*values)[i] == NULL)
         {
             perror("malloc");
