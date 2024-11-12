@@ -47,20 +47,23 @@ int compare(const void *a, const void *b)
 
 int main(int argc, char *argv[])
 {
+//mergesort 4 arq1.dat arq2.dat arq3.dat –o saida.dat
     if (argc < 3)
     {
         fprintf(stderr, "Usage: %s <num_threads> <output_file> <input_file1> <input_file2> ...\n", argv[0]);
         return 1;
     }
 
-    int num_threads = atoi(argv[1]);
+    //int num_threads = atoi(argv[1]);
+    int num_threads = atoi(argv[0]);
     if (num_threads < 1 || num_threads > MAX_THREADS)
     {
         fprintf(stderr, "Número de threads inválido. O número deve ser entre 1 e %d.\n", MAX_THREADS);
         return 1;
     }
 
-    char *output_file = argv[2];
+    //char *output_file = argv[2];
+    char *output_file = argv[arqv.length()-1];
     int num_files = argc - 3;
     char **input_files = argv + 3;
 
